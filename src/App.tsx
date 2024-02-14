@@ -1,18 +1,16 @@
-import Card from './components/Cards'
+import { BrowserRouter } from 'react-router-dom'
+import Rotas from './routes'
+
 import Footer from './components/Footer'
-import Hero from './components/Header'
 import { GlobalStyle } from './styles'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyle />
-      <Hero />
-      <div className="container">
-        <Card />
-      </div>
+      <Rotas />
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 

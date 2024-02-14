@@ -1,12 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
 
-export const MenuSection = styled.section`
-  margin-top: 56px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 48px;
-`
 export const FoodCard = styled.div`
   width: 472px;
   height: 398px;
@@ -19,6 +13,20 @@ export const FoodDetails = styled.div`
   padding: 0 8px;
   height: 181px;
 `
+export const TitleDetails = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+export const DivNota = styled.div`
+  width: 55px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+`
+export const Estrela = styled.span`
+  width: 21px;
+  height: 21px;
+`
 
 export const BoxImg = styled.div`
   height: 217px;
@@ -29,6 +37,7 @@ export const Title = styled.h2`
   font-weight: bold;
   color: ${cores.rosaEscuro};
 `
+
 export const Descricao = styled.p`
   color: ${cores.rosaEscuro};
   font-size: 14px;

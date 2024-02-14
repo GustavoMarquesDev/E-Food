@@ -8,6 +8,7 @@ export const Banner = styled.header`
   background-repeat: no-repeat;
   background-size: cover;
   color: ${cores.rosaEscuro};
+  padding-top: 40px;
 `
 
 export const HeaderContainer = styled.div`
@@ -15,10 +16,6 @@ export const HeaderContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   text-align: center;
-`
-
-export const BoxImg = styled.div`
-  padding-top: 40px;
 `
 
 export const Title = styled.h2`

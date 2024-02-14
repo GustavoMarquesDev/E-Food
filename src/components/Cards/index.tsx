@@ -1,91 +1,53 @@
-import comida_Japonesa from '../../assets/imgs/Comida_Japonesa.png'
-import macarrao from '../../assets/imgs/Macarrao.png'
-import Food from '../../models/Comidas'
 import Tag from '../Tag'
 import {
   BoxImg,
   ButtonSaibaMais,
   Descricao,
+  DivNota,
+  Estrela,
   FoodCard,
   FoodDetails,
   Infos,
-  MenuSection,
-  Title
+  Title,
+  TitleDetails
 } from './styles'
 
-const comidas: Food[] = [
-  {
-    id: 1,
-    image: comida_Japonesa,
-    name: 'Hioki Sushi',
-    description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
-    infos: ['Destaque da semana', 'Japonesa']
-  },
+import estrela from '../../assets/imgs/estrela.png'
 
-  {
-    id: 2,
-    image: macarrao,
-    name: 'La Dolce Vita Trattoria',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    infos: ['Italiana']
-  },
-  {
-    id: 3,
-    image: macarrao,
-    name: 'La Dolce Vita Trattoria',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    infos: ['Italiana']
-  },
-  {
-    id: 4,
-    image: macarrao,
-    name: 'La Dolce Vita Trattoria',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    infos: ['Italiana']
-  },
-  {
-    id: 5,
-    image: macarrao,
-    name: 'La Dolce Vita Trattoria',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    infos: ['Italiana']
-  },
-  {
-    id: 6,
-    image: macarrao,
-    name: 'La Dolce Vita Trattoria',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    infos: ['Italiana']
-  }
-]
+type Props = {
+  id: number
+  image: string
+  name: string
+  description: string
+  infos: string[]
+  nota: number
+}
 
-const Card = () => (
-  <MenuSection>
-    {comidas.map((comida) => (
-      <FoodCard key={comida.id}>
-        {comida.infos.map((info) => (
-          <Infos key={info}>
-            <Tag>{info}</Tag>
-          </Infos>
-        ))}
+const Card = ({ id, image, name, description, infos, nota }: Props) => (
+  <FoodCard>
+    <BoxImg>
+      <img src={image} alt={name} />
+    </BoxImg>
+    <Infos>
+      {infos.map((info) => (
+        <Tag key={id}>{info}</Tag>
+      ))}
+    </Infos>
+    <FoodDetails>
+      <TitleDetails>
+        <Title>{name}</Title>
+        <DivNota>
+          <Title>{nota}</Title>
+          <Estrela>
+            <img src={estrela} alt="estrela" />
+          </Estrela>
+        </DivNota>
+      </TitleDetails>
 
-        <BoxImg>
-          <img src={comida.image} alt={comida.name} />
-        </BoxImg>
-        <FoodDetails>
-          <Title> {comida.name} </Title>
-          <Descricao>{comida.description}</Descricao>
-          <ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
-        </FoodDetails>
-      </FoodCard>
-    ))}
-  </MenuSection>
+      <Descricao>{description}</Descricao>
+      <ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
+    </FoodDetails>
+  </FoodCard>
 )
 
 export default Card

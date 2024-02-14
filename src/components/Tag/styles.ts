@@ -11,4 +11,5 @@ export const TagContainer = styled.div`
   font-size: 12px;
   font-weight: bold;
   display: inline-block;
+  margin-left: 8px;
 `
