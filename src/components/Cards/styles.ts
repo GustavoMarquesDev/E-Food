@@ -5,6 +5,14 @@ export const FoodCard = styled.div`
   width: 472px;
   height: 398px;
   position: relative;
+
+  @media (max-width: 1060px) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 680px) {
+    margin-bottom: 20px;
+  }
 `
 export const FoodDetails = styled.div`
   background-color: #fff;

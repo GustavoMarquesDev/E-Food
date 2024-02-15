@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
   font-family: Roboto, sans-serif;
 
   body {
-    background-color: #FFF8F2;
+    background-color: ${cores.rosaDeFundo};
   }
 }
 
