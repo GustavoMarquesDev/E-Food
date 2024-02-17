@@ -8,10 +8,20 @@ export const FooterContainer = styled.div`
   width: 100%;
   margin-top: 120px;
   text-align: center;
+`
 
+export const Logo = styled.div`
   img {
     margin-top: 40px;
   }
+`
+export const Links = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 24px;
+  margin-top: 32.5px;
 `
 
 export const FooterDescription = styled.h3`
@@ -20,12 +30,5 @@ export const FooterDescription = styled.h3`
   margin: 0 auto;
   width: 480px;
   height: 24px;
-  margin-top: 64px;
-`
-
-export const Links = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  margin-top: 80px;
 `

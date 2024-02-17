@@ -1,34 +1,27 @@
 import logo from '../../assets/imgs/logo.png'
 import Capa from '../../assets/imgs/Home_Capa.png'
-import {
-  BannerDiv,
-  BannerDivItem,
-  BannerText,
-  HeroDiv,
-  HeroName,
-  HeroTipo
-} from './styles'
+import * as S from './styles'
 import macarraoCapa from '../../assets/imgs/Macarrao_Capa.png'
 
 const Header_Perfil = () => (
   <>
-    <BannerDiv style={{ backgroundImage: `url(${Capa})` }}>
+    <S.BannerDiv style={{ backgroundImage: `url(${Capa})` }}>
       <div className="container">
-        <BannerDivItem>
-          <BannerText>Restaurantes</BannerText>
+        <S.BannerDivItem>
+          <S.BannerText>Restaurantes</S.BannerText>
           <img src={logo} alt="E-food" />
-          <BannerText>
+          <S.BannerText>
             <span>0 produto(s) no carrinho</span>
-          </BannerText>
-        </BannerDivItem>
+          </S.BannerText>
+        </S.BannerDivItem>
       </div>
-    </BannerDiv>
-    <HeroDiv style={{ backgroundImage: `url(${macarraoCapa})` }}>
+    </S.BannerDiv>
+    <S.HeroDiv style={{ backgroundImage: `url(${macarraoCapa})` }}>
       <div className="container">
-        <HeroTipo>Italiana</HeroTipo>
-        <HeroName>La Dolce Vita Trattoria</HeroName>
+        <S.HeroTipo>Italiana</S.HeroTipo>
+        <S.HeroName>La Dolce Vita Trattoria</S.HeroName>
       </div>
-    </HeroDiv>
+    </S.HeroDiv>
   </>
 )
 

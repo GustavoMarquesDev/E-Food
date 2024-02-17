@@ -8,7 +8,7 @@ export const Banner = styled.header`
   background-repeat: no-repeat;
   background-size: cover;
   color: ${cores.rosaEscuro};
-  padding-top: 40px;
+  padding-top: 64px;
 `
 
 export const HeaderContainer = styled.div`

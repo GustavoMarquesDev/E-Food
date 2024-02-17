@@ -1,14 +1,14 @@
 import logo from '../../assets/imgs/logo.png'
-import { FooterContainer, FooterDescription, Links } from './styles'
+import { FooterContainer, FooterDescription, Links, Logo } from './styles'
 import instagram from '../../assets/imgs/Instagram.png'
 import facebook from '../../assets/imgs/Facebook.png'
 import twiter from '../../assets/imgs/Twiter.png'
 
 const Footer = () => (
   <FooterContainer>
-    <div>
+    <Logo>
       <img src={logo} alt="E-food" />
-    </div>
+    </Logo>
     <Links>
       <li>
         <a href="#">

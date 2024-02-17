@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
+import { Link } from 'react-router-dom'
 
 export const FoodCard = styled.div`
   width: 472px;
@@ -53,15 +54,12 @@ export const Descricao = styled.p`
   margin: 16px 0px;
 `
 
-export const ButtonSaibaMais = styled.button`
-  width: 82px;
-  height: 24px;
+export const ButtonSaibaMais = styled(Link)`
   font-size: 14px;
   font-weight: bold;
-  align-items: center;
   background-color: ${cores.rosaEscuro};
+  padding: 4px 6px;
   color: ${cores.rosa};
-  cursor: pointer;
   border: none;
 `
 

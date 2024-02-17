@@ -1,16 +1,5 @@
 import Tag from '../Tag'
-import {
-  BoxImg,
-  ButtonSaibaMais,
-  Descricao,
-  DivNota,
-  Estrela,
-  FoodCard,
-  FoodDetails,
-  Infos,
-  Title,
-  TitleDetails
-} from './styles'
+import * as S from './styles'
 
 import estrela from '../../assets/imgs/estrela.png'
 
@@ -24,30 +13,32 @@ type Props = {
 }
 
 const Card = ({ id, image, name, description, infos, nota }: Props) => (
-  <FoodCard>
-    <BoxImg>
+  <S.FoodCard>
+    <S.BoxImg>
       <img src={image} alt={name} />
-    </BoxImg>
-    <Infos>
+    </S.BoxImg>
+    <S.Infos>
       {infos.map((info) => (
         <Tag key={id}>{info}</Tag>
       ))}
-    </Infos>
-    <FoodDetails>
-      <TitleDetails>
-        <Title>{name}</Title>
-        <DivNota>
-          <Title>{nota}</Title>
-          <Estrela>
+    </S.Infos>
+    <S.FoodDetails>
+      <S.TitleDetails>
+        <S.Title>{name}</S.Title>
+        <S.DivNota>
+          <S.Title>{nota}</S.Title>
+          <S.Estrela>
             <img src={estrela} alt="estrela" />
-          </Estrela>
-        </DivNota>
-      </TitleDetails>
+          </S.Estrela>
+        </S.DivNota>
+      </S.TitleDetails>
 
-      <Descricao>{description}</Descricao>
-      <ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
-    </FoodDetails>
-  </FoodCard>
+      <S.Descricao>{description}</S.Descricao>
+      <S.ButtonSaibaMais to={'/perfil'} title="Veja mais sobre nossa delicias">
+        Saiba mais
+      </S.ButtonSaibaMais>
+    </S.FoodDetails>
+  </S.FoodCard>
 )
 
 export default Card
