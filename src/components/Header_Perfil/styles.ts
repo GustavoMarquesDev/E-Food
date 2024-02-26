@@ -1,22 +1,28 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
+import { Link } from 'react-router-dom'
 
 export const BannerDiv = styled.div`
+  padding-top: 40px;
   width: 100%;
-  height: 163px;
+  height: 186px;
   background-repeat: no-repeat;
   background-size: cover;
   color: ${cores.rosaEscuro};
+  padding-top: 64px;
   img {
-    padding-left: 85px;
-    margin-top: -20px;
+    padding-left: 45px;
   }
 `
 export const BannerDivItem = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
+`
+
+export const VoltarHome = styled(Link)`
+  width: 125px;
+  height: 58px;
 `
 
 export const BannerText = styled.p`
@@ -51,8 +57,6 @@ export const HeroTipo = styled.p`
   font-size: 32px;
   font-weight: 100;
   color: #fff;
-  margin-top: 16px;
-  z-index: 200;
 `
 
 export const HeroName = styled(HeroTipo)`

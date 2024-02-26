@@ -39,6 +39,11 @@ export const Estrela = styled.span`
 
 export const BoxImg = styled.div`
   height: 217px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
 `
 export const Title = styled.h2`
   padding-top: 8px;

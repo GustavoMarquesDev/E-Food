@@ -9,7 +9,12 @@ const Header_Perfil = () => (
       <div className="container">
         <S.BannerDivItem>
           <S.BannerText>Restaurantes</S.BannerText>
-          <img src={logo} alt="E-food" />
+          <S.VoltarHome
+            to={'/'}
+            title="Voltar a tela de seleção de restaurantes"
+          >
+            <img src={logo} alt="E-food" />
+          </S.VoltarHome>
           <S.BannerText>
             <span>0 produto(s) no carrinho</span>
           </S.BannerText>
