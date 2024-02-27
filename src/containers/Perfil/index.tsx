@@ -1,10 +1,9 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-import Card from '../../components/Cards_Perfil'
+import CardPerfil from '../../components/Cards_Perfil'
 import Header_Perfil from '../../components/Header_Perfil'
 import * as S from './styles'
-import Modal from '../../components/Modal'
 import { Restaurante } from '../../pages/Home'
 
 export const PerfilContainer = () => {
@@ -35,7 +34,7 @@ export const PerfilContainer = () => {
         <S.MenuSection>
           {restaurante
             ? restaurante.cardapio.map((item) => (
-                <Card
+                <CardPerfil
                   key={item.id}
                   description={getDescricao(item.descricao)}
                   name={item.nome}
@@ -45,7 +44,6 @@ export const PerfilContainer = () => {
               ))
             : null}
         </S.MenuSection>
-        <Modal />
       </div>
     </>
   )

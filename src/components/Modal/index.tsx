@@ -4,7 +4,7 @@ import * as S from './styles'
 import pizza from '../../assets/imgs/Pizza.png'
 
 const Modal = () => {
-  const [modal, setModal] = useState(false)
+  const [modal, setModal] = useState(true)
 
   return (
     <S.Modal className={modal ? 'visivel' : 'oculto'}>
