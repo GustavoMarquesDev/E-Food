@@ -1,7 +1,7 @@
 import Card from '../../components/Cards'
 import { MenuSection } from './styles'
 import { useEffect, useState } from 'react'
-import { Comida } from '../../pages/Home'
+import { Restaurante } from '../../pages/Home'
 
 // const comidas: Food[] = [
 //   {
@@ -62,13 +62,12 @@ import { Comida } from '../../pages/Home'
 // ]
 
 const MainContainer = () => {
-  const [comidas, setcomida] = useState<Comida[]>([])
+  const [comidas, setcomida] = useState<Restaurante[]>([])
 
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
       .then((res) => res.json())
       .then((res) => {
-        console.log(res)
         return setcomida(res)
       })
   }, [])

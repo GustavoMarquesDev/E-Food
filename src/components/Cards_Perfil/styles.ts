@@ -21,6 +21,11 @@ export const FoodCard = styled.div`
 export const BoxImg = styled.div`
   height: 167px;
   width: 304px;
+  img {
+    width: 304px;
+    height: 167px;
+    object-fit: cover;
+  }
 `
 export const Title = styled.h2`
   padding-top: 8px;

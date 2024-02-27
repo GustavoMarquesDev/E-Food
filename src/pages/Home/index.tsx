@@ -10,7 +10,7 @@ export type Cardapio = {
   porcao: string
 }
 
-export type Comida = {
+export type Restaurante = {
   id: number
   titulo: string
   avaliacao: number

@@ -51,7 +51,7 @@ const Card = ({
         </S.TitleDetails>
         <S.Descricao>{getDescricao(description)}</S.Descricao>
         <S.ButtonSaibaMais
-          to={'/perfil'}
+          to={`/perfil/${id}`}
           title="Veja mais sobre nossa delicias"
         >
           Saiba mais
