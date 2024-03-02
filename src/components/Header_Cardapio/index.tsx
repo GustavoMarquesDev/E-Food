@@ -1,9 +1,15 @@
 import logo from '../../assets/imgs/logo.png'
 import Capa from '../../assets/imgs/Home_Capa.png'
 import * as S from './styles'
-import macarraoCapa from '../../assets/imgs/Macarrao_Capa.png'
 
-const Header_Perfil = () => (
+import { Restaurante } from '../../pages/Home'
+import { capitalize } from '../Restaurantes'
+
+type Props = {
+  cardapio: Restaurante
+}
+
+const Header_Cardapio = ({ cardapio }: Props) => (
   <>
     <S.BannerDiv style={{ backgroundImage: `url(${Capa})` }}>
       <div className="container">
@@ -21,13 +27,13 @@ const Header_Perfil = () => (
         </S.BannerDivItem>
       </div>
     </S.BannerDiv>
-    <S.HeroDiv style={{ backgroundImage: `url(${macarraoCapa})` }}>
+    <S.HeroDiv style={{ backgroundImage: `url(${cardapio.capa})` }}>
       <div className="container">
-        <S.HeroTipo>Italiana</S.HeroTipo>
-        <S.HeroName>La Dolce Vita Trattoria</S.HeroName>
+        <S.HeroTipo>{capitalize(cardapio.tipo)}</S.HeroTipo>
+        <S.HeroName>{cardapio.titulo}</S.HeroName>
       </div>
     </S.HeroDiv>
   </>
 )
 
-export default Header_Perfil
+export default Header_Cardapio

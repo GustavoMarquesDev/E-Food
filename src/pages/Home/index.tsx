@@ -1,5 +1,5 @@
-import Hero from '../../components/Header'
-import MainContainer from '../../containers/Main'
+import Hero from '../../components/Header_Restaurantes'
+import MainContainer from '../../components/Restaurantes'
 
 export type Cardapio = {
   foto: string
