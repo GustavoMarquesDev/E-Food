@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Home from './pages/Home'
-import Cardapios from './pages/Cardapio'
+import Home from './pages/Restaurantes'
+import Cardapios from './pages/Cardapios'
 
 const Rotas = () => (
   <Routes>

@@ -1,7 +1,7 @@
 import Card_Restaurante from '../Cards_Restaurante'
 import { MenuSection } from './styles'
 import { useEffect, useState } from 'react'
-import { Restaurante } from '../../pages/Home'
+import { Restaurante } from '../../pages/Restaurantes'
 
 export const capitalize = (termo: string) => {
   return termo.charAt(0).toUpperCase() + termo.slice(1)

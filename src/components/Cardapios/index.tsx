@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import * as S from './styles'
-import { Restaurante } from '../../pages/Home'
+import { Restaurante } from '../../pages/Restaurantes'
 import Header_Cardapio from '../Header_Cardapio'
 import CardCardapio from '../Cards_Pratos'
 
@@ -28,15 +28,15 @@ export const CardapioContainer = () => {
       <Header_Cardapio cardapio={cardapio} />
       <div className="container">
         <S.MenuSection>
-          {cardapio.cardapio.map((item) => (
-            <li key={item.id}>
+          {cardapio.cardapio.map((prato) => (
+            <li key={prato.id}>
               <CardCardapio
-                porcao={item.porcao}
-                preco={item.preco}
-                descricao={item.descricao}
-                nome={item.nome}
-                foto={item.foto}
-                id={item.id}
+                porcao={prato.porcao}
+                preco={prato.preco}
+                descricao={prato.descricao}
+                nome={prato.nome}
+                foto={prato.foto}
+                id={prato.id}
               />
             </li>
           ))}

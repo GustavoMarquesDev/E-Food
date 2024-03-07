@@ -2,7 +2,7 @@ import logo from '../../assets/imgs/logo.png'
 import Capa from '../../assets/imgs/Home_Capa.png'
 import * as S from './styles'
 
-import { Restaurante } from '../../pages/Home'
+import { Restaurante } from '../../pages/Restaurantes'
 import { capitalize } from '../Restaurantes'
 
 type Props = {

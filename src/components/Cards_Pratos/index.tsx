@@ -1,8 +1,9 @@
+import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 
-import { BoxImg, BtnAdicionar, Descricao, FoodCard, Title } from './styles'
-import close from '../../assets/imgs/close.png'
+import closeIcon from '../../assets/imgs/close.png'
 import * as S from './styles'
+import { add, open } from '../../store/reducers/cart'
 
 type Props = {
   id: number
@@ -28,25 +29,43 @@ export const getDescricao = (descricao: string) => {
   return descricao
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CardCardapio = ({ id, foto, nome, descricao, porcao, preco }: Props) => {
   const [modal, setModal] = useState(false)
 
+  const dispatch = useDispatch()
+
+  const prato = {
+    foto,
+    nome,
+    descricao,
+    porcao,
+    preco,
+    id
+  }
+
+  const addCart = () => {
+    dispatch(open())
+    dispatch(add(prato))
+    setModal(false)
+  }
+
   return (
-    <FoodCard>
-      <BoxImg>
+    <S.FoodCard>
+      <S.BoxImg>
         <img src={foto} alt={nome} />
-      </BoxImg>
-      <Title>{nome}</Title>
-      <Descricao>{getDescricao(descricao)}</Descricao>
-      <BtnAdicionar onClick={() => setModal(true)}>
-        Adicionar ao carrinho
-      </BtnAdicionar>
+      </S.BoxImg>
+      <S.Title>{nome}</S.Title>
+      <S.Descricao>{getDescricao(descricao)}</S.Descricao>
+      <S.BtnAdicionar onClick={() => setModal(true)}>
+        Mais detalhes
+      </S.BtnAdicionar>
       <S.Modal className={modal ? 'visivel' : 'oculto'}>
         <S.ModalContent className="container">
           <S.ModalHeader>
             <img
               onClick={() => setModal(false)}
-              src={close}
+              src={closeIcon}
               alt="Clique aqui para fechar"
             />
           </S.ModalHeader>
@@ -61,7 +80,7 @@ const CardCardapio = ({ id, foto, nome, descricao, porcao, preco }: Props) => {
                 <br />
                 Serve {porcao}
               </p>
-              <S.BtnAdicionarCarrinho>
+              <S.BtnAdicionarCarrinho onClick={addCart}>
                 Adicionar ao carrinho {formataPreco(preco)}
               </S.BtnAdicionarCarrinho>
             </div>
@@ -69,7 +88,7 @@ const CardCardapio = ({ id, foto, nome, descricao, porcao, preco }: Props) => {
         </S.ModalContent>
         <div className="overlay" onClick={() => setModal(false)}></div>
       </S.Modal>
-    </FoodCard>
+    </S.FoodCard>
   )
 }
 
