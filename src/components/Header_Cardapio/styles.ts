@@ -25,9 +25,23 @@ export const VoltarHome = styled(Link)`
   height: 58px;
 `
 
-export const BannerText = styled.p`
+export const BannerText = styled(Link)`
   font-size: 18px;
   font-weight: 900;
+  color: ${cores.rosaEscuro};
+
+  span {
+    cursor: pointer;
+  }
+`
+
+export const BannerCart = styled.p`
+  font-size: 18px;
+  font-weight: 900;
+
+  span {
+    cursor: pointer;
+  }
 `
 
 export const HeroDiv = styled.div`
