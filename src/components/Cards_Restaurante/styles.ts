@@ -14,6 +14,12 @@ export const FoodCard = styled.div`
   @media (max-width: 680px) {
     margin-bottom: 20px;
   }
+
+  &:hover {
+    box-shadow: 0px 25px 20px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
+    transition: all 0.5s ease;
+  }
 `
 export const FoodDetails = styled.div`
   background-color: #fff;

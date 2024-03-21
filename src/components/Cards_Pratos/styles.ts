@@ -105,6 +105,12 @@ export const ModalContent = styled.div`
     max-width: 280px;
     height: 280px;
   }
+
+  &:hover {
+    box-shadow: 0px 25px 20px rgba(255, 203, 219, 0.04);
+    transform: translateY(-3px);
+    transition: all 0.5s ease;
+  }
 `
 
 export const ModalBox = styled.div`

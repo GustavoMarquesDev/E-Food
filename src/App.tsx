@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 import { GlobalStyle } from './styles'
 import { Cart } from './components/Cart'
 import { Provider } from 'react-redux'
-import store from './store'
+import { store } from './store'
 
 function App() {
   return (
