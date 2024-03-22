@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const FooterContainer = styled.div`
-  background-color: ${cores.rosa};
+  background-color: ${colors.pink};
   height: 298px;
   max-width: 100%;
   width: 100%;
@@ -26,7 +26,7 @@ export const Links = styled.div`
 
 export const FooterDescription = styled.h3`
   font-size: 10px;
-  color: ${cores.rosaEscuro};
+  color: ${colors.darkPink};
   margin: 0 auto;
   width: 480px;
   height: 24px;

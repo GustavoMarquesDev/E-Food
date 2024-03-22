@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
-import { BtnAdicionar } from '../Cards_Pratos/styles'
+import { colors } from '../../styles'
+import { BtnAdd } from '../Cards_Dishes/styles'
 
 type RowProps = {
   marginTop?: string
@@ -18,10 +18,10 @@ export const CheckoutContainer = styled.div`
   display: flex;
   top: 0;
   left: 0;
-  color: ${cores.rosaEscuro};
+  color: ${colors.darkPink};
 `
 export const Aside = styled.aside`
-  background-color: ${cores.rosaEscuro};
+  background-color: ${colors.darkPink};
   z-index: 1;
   max-width: 360px;
   width: 100%;
@@ -39,24 +39,24 @@ export const Aside = styled.aside`
     display: block;
 
     p {
-      color: ${cores.rosaClaro};
+      color: ${colors.lightPink};
       margin-top: 16px;
       font-size: 14px;
     }
 
-    ${BtnAdicionar} {
-      color: ${cores.rosaEscuro};
+    ${BtnAdd} {
+      color: ${colors.darkPink};
       margin-top: 24px;
     }
   }
 
-  ${BtnAdicionar} {
-    color: ${cores.rosaEscuro};
+  ${BtnAdd} {
+    color: ${colors.darkPink};
     margin-bottom: 8px;
   }
 
   h4 {
-    color: ${cores.rosaClaro};
+    color: ${colors.lightPink};
     font-weight: 700;
     font-size: 16px;
   }
@@ -74,7 +74,7 @@ export const InputGroup = styled.div<InputProps>`
   max-width: ${(props) => props.maxWidth || 'auto'};
 
   label {
-    color: ${cores.rosaClaro};
+    color: ${colors.lightPink};
     font-weight: 700;
     font-size: 14px;
     display: block;

@@ -18,7 +18,12 @@ const cartSlice = createSlice({
       state.items.push(action.payload)
     },
     remove: (state, action: PayloadAction<number>) => {
-      state.items = state.items.filter((item) => item.id !== action.payload)
+      const indexToRemove = state.items.findIndex(
+        (item) => item.id === action.payload
+      )
+      if (indexToRemove !== -1) {
+        state.items.splice(indexToRemove, 1)
+      }
     },
     open: (state) => {
       state.isOpen = true

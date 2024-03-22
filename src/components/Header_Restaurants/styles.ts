@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const Banner = styled.header`
   width: 100%;
@@ -7,7 +7,7 @@ export const Banner = styled.header`
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
-  color: ${cores.rosaEscuro};
+  color: ${colors.darkPink};
   padding-top: 64px;
 `
 

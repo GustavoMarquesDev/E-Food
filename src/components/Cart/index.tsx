@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { close, remove } from '../../store/reducers/cart'
 import { RootReducer } from '../../store'
 
-import { BtnAdicionar } from '../Cards_Pratos/styles'
+import { BtnAdd } from '../Cards_Dishes/styles'
 import { Checkout } from '../Checkout'
 import Lixeira from '../../assets/imgs/Lixeira.png'
 
@@ -56,9 +56,9 @@ export const Cart = () => {
                   <p>Valor total</p>
                   <span>{parseToBrl(getTotalPrice(items))}</span>
                 </S.Prices>
-                <BtnAdicionar onClick={() => setDelivery(true)}>
+                <BtnAdd onClick={() => setDelivery(true)}>
                   Continuar com a entrega
-                </BtnAdicionar>
+                </BtnAdd>
               </>
             ) : (
               <h3>Nenhum item adicionado</h3>

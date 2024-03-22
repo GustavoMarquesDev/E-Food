@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const FoodCard = styled.div`
   width: 320px;
   height: 338px;
   padding: 8px;
-  background-color: ${cores.rosaEscuro};
-  color: ${cores.rosaClaro};
+  background-color: ${colors.darkPink};
+  color: ${colors.lightPink};
 
   @media (max-width: 1060px) {
     margin: 0 auto;
@@ -31,25 +31,25 @@ export const Title = styled.h2`
   padding-top: 8px;
   font-size: 16px;
   font-weight: 900;
-  color: ${cores.rosaClaro};
+  color: ${colors.lightPink};
 `
 
-export const Descricao = styled.p`
-  color: ${cores.rosaClaro};
+export const Description = styled.p`
+  color: ${colors.lightPink};
   font-size: 14px;
   line-height: 22px;
   margin: 8px 0;
 `
 
-export const BtnAdicionar = styled.button`
+export const BtnAdd = styled.button`
   display: block;
   width: 100%;
   height: 24px;
   font-size: 14px;
   font-weight: bold;
   text-align: center;
-  background-color: ${cores.rosaClaro};
-  color: ${cores.rosaEscuro};
+  background-color: ${colors.lightPink};
+  color: ${colors.darkPink};
   cursor: pointer;
   border: none;
 `
@@ -97,7 +97,7 @@ export const Modal = styled.div`
 `
 
 export const ModalContent = styled.div`
-  background-color: ${cores.rosaEscuro};
+  background-color: ${colors.darkPink};
   height: 344px;
   z-index: 1;
 
@@ -139,7 +139,7 @@ export const BoxImgModal = styled.div`
   height: 280px;
 `
 
-export const BtnAdicionarCarrinho = styled(BtnAdicionar)`
+export const BtnAddToCart = styled(BtnAdd)`
   display: inline-block;
   max-width: 218px;
 `

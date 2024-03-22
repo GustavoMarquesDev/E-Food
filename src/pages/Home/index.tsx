@@ -1,5 +1,5 @@
-import Loader from '../../Loader'
-import Hero from '../../components/Header_Restaurantes'
+import Loader from '../../components/Loader'
+import Hero from '../../components/Header_Restaurants'
 import MainContainer from '../../components/Restaurantes'
 import { useGetRestaurantsQuery } from '../../services/api'
 

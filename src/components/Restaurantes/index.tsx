@@ -1,5 +1,7 @@
 import { capitalize } from '../../utils'
-import Card_Restaurante from '../Cards_Restaurante'
+
+import Card_Restaurante from '../Cards_Restaurants'
+
 import { MenuSection } from './styles'
 
 export type Props = {

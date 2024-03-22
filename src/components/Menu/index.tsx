@@ -1,19 +1,19 @@
 import { useParams } from 'react-router-dom'
 
-import Header_Cardapio from '../Header_Cardapio'
-import CardCardapio from '../Cards_Pratos'
-import Loader from '../../Loader'
+import Header_Cardapio from '../Header_Menu'
+import CardCardapio from '../Cards_Dishes'
+import Loader from '../Loader'
 
 import { useGetRestaurantQuery } from '../../services/api'
 
 import * as S from './styles'
 
-type PratoParams = {
+type dishParams = {
   id: string
 }
 
-export const CardapioContainer = () => {
-  const { id } = useParams() as PratoParams
+export const MenuPage = () => {
+  const { id } = useParams() as dishParams
   const { data: restaurant } = useGetRestaurantQuery(id)
 
   if (restaurant) {
@@ -43,4 +43,4 @@ export const CardapioContainer = () => {
   return <Loader />
 }
 
-export default CardapioContainer
+export default MenuPage

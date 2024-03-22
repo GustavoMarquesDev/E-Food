@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { Link } from 'react-router-dom'
 
 export const BannerDiv = styled.div`
@@ -8,19 +8,19 @@ export const BannerDiv = styled.div`
   height: 186px;
   background-repeat: no-repeat;
   background-size: cover;
-  color: ${cores.rosaEscuro};
+  color: ${colors.darkPink};
   padding-top: 64px;
   img {
     padding-left: 45px;
   }
 `
-export const BannerDivItem = styled.div`
+export const BannerDivIten = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 
-export const VoltarHome = styled(Link)`
+export const BackHome = styled(Link)`
   width: 125px;
   height: 58px;
 `
@@ -28,7 +28,7 @@ export const VoltarHome = styled(Link)`
 export const BannerText = styled(Link)`
   font-size: 18px;
   font-weight: 900;
-  color: ${cores.rosaEscuro};
+  color: ${colors.darkPink};
 
   span {
     cursor: pointer;
@@ -50,7 +50,7 @@ export const HeroDiv = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: ${cores.rosaEscuro};
+  color: ${colors.darkPink};
   position: relative;
   z-index: -1;
 
@@ -67,13 +67,16 @@ export const HeroDiv = styled.div`
   }
 `
 
-export const HeroTipo = styled.p`
+export const HeroType = styled.p`
   font-size: 32px;
   font-weight: 100;
   color: #fff;
+  padding-top: 24px;
 `
 
-export const HeroName = styled(HeroTipo)`
+export const HeroName = styled.p`
   font-weight: 900;
   margin-top: 156px;
+  color: #fff;
+  font-size: 32px;
 `

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
-import { BtnAdicionar } from '../Cards_Pratos/styles'
+import { colors } from '../../styles'
+import { BtnAdd } from '../Cards_Dishes/styles'
 
 export const Overlay = styled.div`
   position: absolute;
@@ -20,7 +20,7 @@ export const CartContainer = styled.div`
   display: none;
   top: 0;
   left: 0;
-  color: ${cores.rosaEscuro};
+  color: ${colors.darkPink};
 
   &.is-open {
     display: flex;
@@ -28,25 +28,25 @@ export const CartContainer = styled.div`
 `
 
 export const Aside = styled.aside`
-  background-color: ${cores.rosaEscuro};
+  background-color: ${colors.darkPink};
   z-index: 1;
   max-width: 360px;
   width: 100%;
   padding: 40px 8px;
 
-  ${BtnAdicionar} {
-    color: ${cores.rosaEscuro};
+  ${BtnAdd} {
+    color: ${colors.darkPink};
     margin-top: 16px;
   }
 
   h3 {
-    color: ${cores.rosaClaro};
+    color: ${colors.lightPink};
     text-align: center;
   }
 `
 
 export const CartFood = styled.li`
-  background-color: ${cores.rosaClaro};
+  background-color: ${colors.lightPink};
   display: flex;
   gap: 8px;
   padding: 8px;
@@ -84,7 +84,7 @@ export const CartFood = styled.li`
 `
 
 export const Prices = styled.div`
-  color: ${cores.rosa};
+  color: ${colors.pink};
   display: flex;
   justify-content: space-between;
   margin-top: 40px;

@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const cores = {
-  rosaClaro: '#FFEBD9',
-  rosaEscuro: '#E66767',
-  rosa: '#FFEBD9',
-  rosaDeFundo: '#FFF8F2'
+export const colors = {
+  lightPink: '#FFEBD9',
+  darkPink: '#E66767',
+  pink: '#FFEBD9',
+  pinkBackground: '#FFF8F2'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   outline: none;
 
   body {
-    background-color: ${cores.rosaDeFundo};
+    background-color: ${colors.pinkBackground};
   }
 }
 

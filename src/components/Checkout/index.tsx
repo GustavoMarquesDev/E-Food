@@ -4,7 +4,7 @@ import { useFormik } from 'formik'
 import { useNavigate } from 'react-router-dom'
 import InputMask from 'react-input-mask'
 
-import { BtnAdicionar } from '../Cards_Pratos/styles'
+import { BtnAdd } from '../Cards_Dishes/styles'
 import { Overlay } from '../Cart/styled'
 
 import { RootReducer } from '../../store'
@@ -234,12 +234,12 @@ export const Checkout = ({
                 </S.InputGroup>
               </S.Row>
               <S.ButtonDiv>
-                <BtnAdicionar type="button" onClick={() => formAdressIsValid()}>
+                <BtnAdd type="button" onClick={() => formAdressIsValid()}>
                   Continuar com o pagamento
-                </BtnAdicionar>
-                <BtnAdicionar onClick={() => setDelivery(false)}>
+                </BtnAdd>
+                <BtnAdd onClick={() => setDelivery(false)}>
                   Voltar para o carrinho
-                </BtnAdicionar>
+                </BtnAdd>
               </S.ButtonDiv>
             </form>
           </div>
@@ -331,16 +331,16 @@ export const Checkout = ({
                 </S.InputGroup>
               </S.Row>
               <S.ButtonDiv>
-                <BtnAdicionar
+                <BtnAdd
                   onClick={confirmPayment}
                   type="button"
                   title="Clique aqui para finalizar o pagamento"
                 >
                   Finalizar pagamento
-                </BtnAdicionar>
-                <BtnAdicionar onClick={() => setUserAddress(false)}>
+                </BtnAdd>
+                <BtnAdd onClick={() => setUserAddress(false)}>
                   Voltar para a edição de endereço
-                </BtnAdicionar>
+                </BtnAdd>
               </S.ButtonDiv>
             </form>
           </div>
@@ -368,13 +368,13 @@ export const Checkout = ({
               Esperamos que desfrute de uma deliciosa e agradável experiência
               gastronômica. Bom apetite!
             </p>
-            <BtnAdicionar
+            <BtnAdd
               type="button"
               title="clique aqui para concluir sua compra"
               onClick={finishPayment}
             >
               Concluir
-            </BtnAdicionar>
+            </BtnAdd>
           </div>
         )}
       </S.Aside>

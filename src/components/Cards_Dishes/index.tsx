@@ -26,7 +26,7 @@ export const getDescricao = (descricao: string) => {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const CardCardapio = ({ id, foto, nome, descricao, porcao, preco }: Props) => {
+const CardMenu = ({ id, foto, nome, descricao, porcao, preco }: Props) => {
   const [modal, setModal] = useState(false)
 
   const dispatch = useDispatch()
@@ -52,10 +52,8 @@ const CardCardapio = ({ id, foto, nome, descricao, porcao, preco }: Props) => {
         <img src={foto} alt={nome} />
       </S.BoxImg>
       <S.Title>{nome}</S.Title>
-      <S.Descricao>{getDescricao(descricao)}</S.Descricao>
-      <S.BtnAdicionar onClick={() => setModal(true)}>
-        Mais detalhes
-      </S.BtnAdicionar>
+      <S.Description>{getDescricao(descricao)}</S.Description>
+      <S.BtnAdd onClick={() => setModal(true)}>Mais detalhes</S.BtnAdd>
       <S.Modal className={modal ? 'visivel' : 'oculto'}>
         <S.ModalContent className="container">
           <S.ModalHeader>
@@ -76,9 +74,9 @@ const CardCardapio = ({ id, foto, nome, descricao, porcao, preco }: Props) => {
                 <br />
                 Serve {porcao}
               </p>
-              <S.BtnAdicionarCarrinho onClick={addCart}>
+              <S.BtnAddToCart onClick={addCart}>
                 Adicionar ao carrinho {parseToBrl(preco)}
-              </S.BtnAdicionarCarrinho>
+              </S.BtnAddToCart>
             </div>
           </S.ModalBox>
         </S.ModalContent>
@@ -88,4 +86,4 @@ const CardCardapio = ({ id, foto, nome, descricao, porcao, preco }: Props) => {
   )
 }
 
-export default CardCardapio
+export default CardMenu

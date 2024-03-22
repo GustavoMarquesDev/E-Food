@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { Link } from 'react-router-dom'
 
 export const FoodCard = styled.div`
@@ -23,7 +23,7 @@ export const FoodCard = styled.div`
 `
 export const FoodDetails = styled.div`
   background-color: #fff;
-  border: 1px solid ${cores.rosaEscuro};
+  border: 1px solid ${colors.darkPink};
   border-top: none;
   padding: 0 8px;
   height: 181px;
@@ -55,11 +55,11 @@ export const Title = styled.h2`
   padding-top: 8px;
   font-size: 18px;
   font-weight: bold;
-  color: ${cores.rosaEscuro};
+  color: ${colors.darkPink};
 `
 
 export const Descricao = styled.p`
-  color: ${cores.rosaEscuro};
+  color: ${colors.darkPink};
   font-size: 14px;
   line-height: 22px;
   margin: 16px 0px;
@@ -68,9 +68,9 @@ export const Descricao = styled.p`
 export const ButtonSaibaMais = styled(Link)`
   font-size: 14px;
   font-weight: bold;
-  background-color: ${cores.rosaEscuro};
+  background-color: ${colors.darkPink};
   padding: 4px 6px;
-  color: ${cores.rosa};
+  color: ${colors.pink};
   border: none;
 `
 

@@ -1,4 +1,4 @@
-import CardapioContainer from '../../components/Cardapios'
+import CardapioContainer from '../../components/Menu'
 
 const Cardapios = () => {
   return (
