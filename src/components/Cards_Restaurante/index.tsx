@@ -1,7 +1,8 @@
 import Tag from '../Tag'
-import * as S from './styles'
 
 import estrela from '../../assets/imgs/estrela.png'
+
+import * as S from './styles'
 
 type Props = {
   id: number

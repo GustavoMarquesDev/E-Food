@@ -1,9 +1,12 @@
 import { useParams } from 'react-router-dom'
-import * as S from './styles'
+
 import Header_Cardapio from '../Header_Cardapio'
 import CardCardapio from '../Cards_Pratos'
-import { useGetRestaurantQuery } from '../../services/api'
 import Loader from '../../Loader'
+
+import { useGetRestaurantQuery } from '../../services/api'
+
+import * as S from './styles'
 
 type PratoParams = {
   id: string

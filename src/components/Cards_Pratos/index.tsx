@@ -2,8 +2,11 @@ import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 
 import closeIcon from '../../assets/imgs/close.png'
-import * as S from './styles'
+
 import { add, open } from '../../store/reducers/cart'
+import { parseToBrl } from '../../utils'
+
+import * as S from './styles'
 
 type Props = {
   id: number
@@ -12,13 +15,6 @@ type Props = {
   descricao: string
   porcao: string
   preco: number
-}
-
-export const formataPreco = (preco = 0) => {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  }).format(preco)
 }
 
 export const getDescricao = (descricao: string) => {
@@ -81,7 +77,7 @@ const CardCardapio = ({ id, foto, nome, descricao, porcao, preco }: Props) => {
                 Serve {porcao}
               </p>
               <S.BtnAdicionarCarrinho onClick={addCart}>
-                Adicionar ao carrinho {formataPreco(preco)}
+                Adicionar ao carrinho {parseToBrl(preco)}
               </S.BtnAdicionarCarrinho>
             </div>
           </S.ModalBox>

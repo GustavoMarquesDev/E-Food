@@ -32,7 +32,22 @@ export const Aside = styled.aside`
   }
 
   .is-visibleTwo {
-    display: none;
+    display: block;
+  }
+
+  .is-visibleThree {
+    display: block;
+
+    p {
+      color: ${cores.rosaClaro};
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+    ${BtnAdicionar} {
+      color: ${cores.rosaEscuro};
+      margin-top: 24px;
+    }
   }
 
   ${BtnAdicionar} {
@@ -75,6 +90,10 @@ export const InputGroup = styled.div<InputProps>`
     border: 0;
     display: block;
     width: 100%;
+
+    &.error {
+      border: 3px solid red;
+    }
   }
 `
 
