@@ -111,6 +111,18 @@ export const ModalContent = styled.div`
     transform: translateY(-3px);
     transition: all 0.5s ease;
   }
+
+  @media (max-width: 1040px) {
+    max-width: 70%;
+  }
+
+  @media (max-width: 900px) {
+    height: auto;
+
+    img {
+      max-width: 100%;
+    }
+  }
 `
 
 export const ModalBox = styled.div`
@@ -119,6 +131,10 @@ export const ModalBox = styled.div`
   gap: 24px;
   position: relative;
   z-index: 1;
+
+  @media (max-width: 900px) {
+    display: block;
+  }
 `
 
 export const ModalHeader = styled.header`
@@ -142,4 +158,10 @@ export const BoxImgModal = styled.div`
 export const BtnAddToCart = styled(BtnAdd)`
   display: inline-block;
   max-width: 218px;
+
+  @media (max-width: 900px) {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
 `
