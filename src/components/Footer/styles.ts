@@ -31,4 +31,8 @@ export const FooterDescription = styled.h3`
   width: 480px;
   height: 24px;
   margin-top: 80px;
+
+  @media (max-width: 510px) {
+    width: 350px;
+  }
 `

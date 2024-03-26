@@ -25,7 +25,7 @@ const Card = ({
 }: Props) => {
   const getDescricao = (descricao: string) => {
     if (descricao.length > 95) {
-      return descricao.slice(0, 245) + '...'
+      return descricao.slice(0, 185) + '...'
     }
 
     return descricao

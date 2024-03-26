@@ -1,11 +1,24 @@
-import CardapioContainer from '../../components/Menu'
+import { useParams } from 'react-router-dom'
 
-const Cardapios = () => {
+import { useGetRestaurantQuery } from '../../services/api'
+
+import Hero from '../../components/Hero'
+import MenuPage from '../../components/Menu'
+
+type dishParams = {
+  id: string
+}
+
+const Menus = () => {
+  const { id } = useParams() as dishParams
+  const { data: restaurant } = useGetRestaurantQuery(id)
+
   return (
     <>
-      <CardapioContainer />
+      <Hero type="restaurants" cardapio={restaurant} />
+      <MenuPage />
     </>
   )
 }
 
-export default Cardapios
+export default Menus

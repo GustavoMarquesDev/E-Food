@@ -14,7 +14,7 @@ import { getTotalPrice } from '../../utils'
 import * as S from './styled'
 
 export const Cart = () => {
-  const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
+  const { isOpen, itens } = useSelector((state: RootReducer) => state.cart)
 
   const [delivery, setDelivery] = useState(false)
 
@@ -30,14 +30,14 @@ export const Cart = () => {
 
   return (
     <>
-      {delivery && items.length > 0 ? (
+      {delivery && itens.length > 0 ? (
         <Checkout setDelivery={setDelivery} />
       ) : (
         <S.CartContainer className={isOpen ? 'is-open' : ''}>
           <S.Overlay onClick={closeCart} />
           <S.Aside>
             <ul>
-              {items.map((item) => (
+              {itens.map((item) => (
                 <S.CartFood key={item.id}>
                   <img src={item.foto} alt={item.nome} />
                   <div>
@@ -50,11 +50,11 @@ export const Cart = () => {
                 </S.CartFood>
               ))}
             </ul>
-            {items.length > 0 ? (
+            {itens.length > 0 ? (
               <>
                 <S.Prices>
                   <p>Valor total</p>
-                  <span>{parseToBrl(getTotalPrice(items))}</span>
+                  <span>{parseToBrl(getTotalPrice(itens))}</span>
                 </S.Prices>
                 <BtnAdd onClick={() => setDelivery(true)}>
                   Continuar com a entrega

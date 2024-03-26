@@ -13,4 +13,9 @@ export const MenuSection = styled.section`
   @media (max-width: 680px) {
     display: block;
   }
+
+  @media (max-width: 510px) {
+    display: block;
+    margin: 0 auto;
+  }
 `

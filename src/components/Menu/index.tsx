@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom'
 
-import Header_Cardapio from '../Header_Menu'
 import CardCardapio from '../Cards_Dishes'
 import Loader from '../Loader'
 
@@ -18,25 +17,22 @@ export const MenuPage = () => {
 
   if (restaurant) {
     return (
-      <>
-        <Header_Cardapio cardapio={restaurant} />
-        <div className="container">
-          <S.MenuSection>
-            {restaurant.cardapio.map((prato) => (
-              <li key={prato.id}>
-                <CardCardapio
-                  porcao={prato.porcao}
-                  preco={prato.preco}
-                  descricao={prato.descricao}
-                  nome={prato.nome}
-                  foto={prato.foto}
-                  id={prato.id}
-                />
-              </li>
-            ))}
-          </S.MenuSection>
-        </div>
-      </>
+      <div className="container">
+        <S.MenuSection>
+          {restaurant.cardapio.map((prato) => (
+            <li key={prato.id}>
+              <CardCardapio
+                porcao={prato.porcao}
+                preco={prato.preco}
+                descricao={prato.descricao}
+                nome={prato.nome}
+                foto={prato.foto}
+                id={prato.id}
+              />
+            </li>
+          ))}
+        </S.MenuSection>
+      </div>
     )
   }
 

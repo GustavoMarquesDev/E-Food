@@ -1,6 +1,6 @@
 import Loader from '../../components/Loader'
-import Hero from '../../components/Header_Restaurants'
-import MainContainer from '../../components/Restaurantes'
+import Hero from '../../components/Hero'
+import MainContainer from '../../components/Restaurants'
 import { useGetRestaurantsQuery } from '../../services/api'
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
   if (restaurants) {
     return (
       <>
-        <Hero />
+        <Hero type="menu" />
         <div className="container">
           <MainContainer restaurant={restaurants} />
         </div>

@@ -9,10 +9,23 @@ export const FoodCard = styled.div`
 
   @media (max-width: 1060px) {
     margin: 0 auto;
+    width: 500px;
+    height: 450px;
   }
-
   @media (max-width: 680px) {
     margin-bottom: 20px;
+  }
+
+  @media (max-width: 510px) {
+    margin: 0 auto;
+    width: 350px;
+    height: 450px;
+  }
+
+  @media (max-width: 370px) {
+    margin: 0 auto;
+    width: 450px;
+    height: 400px;
   }
 
   &:hover {
@@ -27,6 +40,11 @@ export const FoodDetails = styled.div`
   border-top: none;
   padding: 0 8px;
   height: 181px;
+
+  @media (max-width: 510px) {
+    width: 350px;
+    height: 190px;
+  }
 `
 export const TitleDetails = styled.div`
   display: flex;
@@ -50,6 +68,10 @@ export const BoxImg = styled.div`
   img {
     width: 100%;
   }
+
+  @media (max-width: 510px) {
+    width: 350px;
+  }
 `
 export const Title = styled.h2`
   padding-top: 8px;
@@ -72,10 +94,21 @@ export const ButtonSaibaMais = styled(Link)`
   padding: 4px 6px;
   color: ${colors.pink};
   border: none;
+
+  @media (max-width: 510px) {
+    display: block;
+    text-align: center;
+  }
 `
 
 export const Infos = styled.div`
   position: absolute;
   top: 16px;
   right: 16px;
+
+  @media (max-width: 510px) {
+    display: inline-block;
+    left: 0;
+    width: 200px;
+  }
 `

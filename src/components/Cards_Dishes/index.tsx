@@ -25,7 +25,6 @@ export const getDescricao = (descricao: string) => {
   return descricao
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CardMenu = ({ id, foto, nome, descricao, porcao, preco }: Props) => {
   const [modal, setModal] = useState(false)
 

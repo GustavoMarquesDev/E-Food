@@ -21,7 +21,7 @@ export const Checkout = ({
 }) => {
   const [userAddress, setUserAddress] = useState(false)
   const [purchase, { isSuccess, data }] = usePurchaseMutation()
-  const { items } = useSelector((state: RootReducer) => state.cart)
+  const { itens } = useSelector((state: RootReducer) => state.cart)
   const navigate = useNavigate()
 
   const form = useFormik({
@@ -95,7 +95,7 @@ export const Checkout = ({
             }
           }
         },
-        products: items.map((item) => ({
+        products: itens.map((item) => ({
           id: item.id,
           price: item.preco as number
         }))
@@ -249,7 +249,7 @@ export const Checkout = ({
         {userAddress && !isSuccess && (
           <div className="is-visibleTwo">
             <h4>
-              Pagamento - Valor a pagar {parseToBrl(getTotalPrice(items))}{' '}
+              Pagamento - Valor a pagar {parseToBrl(getTotalPrice(itens))}{' '}
             </h4>
             <form>
               <S.Row marginTop="16px">

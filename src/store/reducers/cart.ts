@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 type CartState = {
-  items: Cardapio[]
+  itens: Cardapio[]
   isOpen: boolean
 }
 
 const initialState: CartState = {
-  items: [],
+  itens: [],
   isOpen: false
 }
 
@@ -15,14 +15,14 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action: PayloadAction<Cardapio>) => {
-      state.items.push(action.payload)
+      state.itens.push(action.payload)
     },
     remove: (state, action: PayloadAction<number>) => {
-      const indexToRemove = state.items.findIndex(
+      const indexToRemove = state.itens.findIndex(
         (item) => item.id === action.payload
       )
       if (indexToRemove !== -1) {
-        state.items.splice(indexToRemove, 1)
+        state.itens.splice(indexToRemove, 1)
       }
     },
     open: (state) => {
