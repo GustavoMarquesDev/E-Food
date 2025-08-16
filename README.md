@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# 🏆 eFood
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Status projeto](https://img.shields.io/badge/STATUS-CONCLUIDO-GREEN?style=for-the-badge)
 
-## Available Scripts
+## ✔️ Tecnologias Utilizadas
 
-In the project directory, you can run:
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Styled-components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 📎 Sumario
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 📌 Resumo do Projeto
+- 🛠️ Como executar o projeto
+- ⭐ Desafio do Projeto
+- 📂 Temas abordados
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📌 Resumo do Projeto
 
-### `npm run build`
+Este projeto é um desafio do curso engenheiro front-end da EBAC, cujo objetivo é reproduzir o layout disponibilizado no figma e todas as funcionalidades e requisitos que o desafio pede. As tecnologias e forma como serão construidas fica a cargo do desenvolvedor. Para este projeto foi utilizado React + TypeScript + Styled-components.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Como executar o projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para executar este projeto localmente em sua máquina, siga estas etapas:
 
-### `npm run eject`
+- Certifique-se de ter o Node.js instalado em sua máquina.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Clone este repositório em sua máquina local usando o comando `git clone`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Instale as dependências do projeto executando `npm install` no diretório do projeto.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Execute o comando `npm start` para rodar o projeto.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Verificar problemas de ESLint: `npm run lint`
 
-## Learn More
+- Corrigir automaticamente problemas de ESLint (quando possível): `npm run lint:fix`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Formatar código com Prettier: `npm run format`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
+
+## ⭐ Desafio do Projeto
+
+### 1º Etapa
+
+- Utilizar como base o layout disponível no link do [Figma](https://www.figma.com/file/JjduV2Tg713TzYUUsees8b/efood?type=design&node-id=0-1&mode=design&t=fWWekknoLsPfkJ5n-0);
+- Criar um novo projeto React;
+- Utilizar como biblioteca o Styled Component para estilização;
+- Utilizar como biblioteca o React Router para a navegação entre páginas;
+- Criar um novo repositório para o projeto;
+- Subir as alterações no repositório;
+- Criar um projeto na Vercel;
+
+<br>
+
+## 📂 Temas abordados
+
+- `TypeScript`: Este projeto utiliza TypeScript, uma extensão tipada de JavaScript, para trazer um nível adicional de segurança e previsibilidade ao código. O TypeScript permite a detecção precoce de erros e fornece autocompletar melhorado no editor de código, tornando o desenvolvimento mais eficiente e menos propenso a erros.
+
+- `React`: O React é usado neste projeto para construir a interface do usuário. O React permite a criação de componentes reutilizáveis, tornando o código mais limpo e fácil de manter. Além disso, o React facilita a criação de interfaces de usuário interativas e dinâmicas.
+
+- `Styled Components`: Styled Components é uma biblioteca para estilizar componentes React. Neste projeto, Styled Components é usado para escrever CSS em JavaScript, permitindo que os estilos sejam dinâmicos e baseados em props. Isso também ajuda a manter os estilos encapsulados no componente, evitando conflitos de estilo e tornando o código mais limpo.
+
+<br>
+
